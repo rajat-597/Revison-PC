@@ -1,0 +1,21 @@
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Arrays;
+
+class RemoveDuplicate {
+    public static void main(String[] args) {
+        int [] arr1 = {3,5,7,9,4,1,2,3,4};
+        
+        Set<Integer> set = new HashSet<>();
+
+        for(int element:arr1){
+            set.add(element);
+        }
+        int result [] = new int[set.size()];
+        int i = 0;
+        for(int ele : set){
+            result[i++] = ele;
+        }
+        System.out.println("Remove Duplicate " + Arrays.toString(result));
+    }
+}
