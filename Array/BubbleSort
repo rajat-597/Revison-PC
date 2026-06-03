@@ -21,6 +21,6 @@ class BubbleSort {
         for(int arr : arr1){
             System.out.println(arr + " ");
         }
-        System.out.println(arr1[1]);
+        System.out.println(arr1[1]); // to get second highest number , just reverse the if condition sign
     }
 }
