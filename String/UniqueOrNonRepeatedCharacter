@@ -1,0 +1,19 @@
+import java.util.HashMap;
+import java.util.Map;
+class UniqueOrNonRepeatedCharacter {
+    public static void main(String[] args) {
+       String str1 = "Rajat";
+       Map<Character,Integer> data = new HashMap<>();
+       for(char ch : str1.toCharArray()){
+             System.out.println(ch);
+             data.put(ch, data.getOrDefault(ch,0)+1);
+        }
+        
+        System.out.println(data); // {python=1, java=1, selenium=3, js=1}
+        for (Map.Entry<Character, Integer> entry : data.entrySet()) {
+            if(entry.getValue() == 1){
+               System.out.println(entry.getKey());
+            }
+        }
+    }
+}
