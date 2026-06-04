@@ -1,0 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
+class OccurrencesOfString  {
+    public static void main(String[] args) {
+        
+        String str = "java selenium python selenium js selenium";
+        Map<String,Integer> data = new HashMap<>();
+        for(String word : str.toLowerCase().split("\\s+")){
+             System.out.println(word);
+             data.put(word, data.getOrDefault(word,0)+1);
+        }
+        System.out.println(data);
+        for (Map.Entry<String, Integer> entry : data.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+    }
+}
