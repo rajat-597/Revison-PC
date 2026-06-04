@@ -1,0 +1,22 @@
+import java.util.HashMap;
+import java.util.Map;
+class Find_Most_Frequent_Word {
+    public static void main(String[] args) {
+        String str = "java selenium python selenium js selenium";
+        Map<String,Integer> data = new HashMap<>();
+        for(String word : str.toLowerCase().split("\\s+")){
+             System.out.println(word);
+             data.put(word, data.getOrDefault(word,0)+1);
+        }
+        int maxCount = 0;
+        String maxWord = "";
+        System.out.println(data); // {python=1, java=1, selenium=3, js=1}
+        for (Map.Entry<String, Integer> entry : data.entrySet()) {
+            if(entry.getValue()> maxCount){
+                maxWord = entry.getKey();
+                maxCount = entry.getValue();
+            }
+        }
+        System.out.println(maxWord + " " + maxCount); // selenium 3
+    }
+}
