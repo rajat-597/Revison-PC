@@ -1,0 +1,11 @@
+public class PrintEachCharacterTwice {
+    public static void main(String[] args) {
+        String input = "Rajat";
+        StringBuilder sb = new StringBuilder();
+
+        for(char ch : input.toCharArray()){
+            sb.append(ch).append(ch);
+        }
+        System.out.println("Print Each Character Twice " + sb.toString());
+    }
+}
